@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Full-Stack Dev</title>
+  
+  <style>
+    .user_container {
+      margin: 5px 5px;
+      border: 1px solid black;
+      padding: 2px;
+    }
+  </style>
+</head>
+<body>
+    <div>
+      <h1>Get data from MySQL using node.js and javascript</h1>
+      <form id="add-student">
+        <label>Student name:</label>
+        <input type="text" id="studentName">&nbsp&nbsp<br>
+        <label>Student PantherID:</label>
+        <input type="text" id="studentPID">&nbsp&nbsp<br>
+        <label>Student Classification (1=Freshman, 2=Sophomore, 3=Junior, 4=Senior):</label>
+        <input type="text" id="studentClassification"> 
+        <br>       
+        <button type="button" value="click" onclick="addStudent();">Save in DB</button>
+      </form>
+      <br><br>
+      <form id="class-student">
+        <label>Search by student classification (1,2,3,4; blank=ALL):</label>
+        <input type="text" id="studentClass">
+        <br>
+        <button type="button" value="click" onclick="filterClass();">Find Students</button>
+      </form> 
+    </div>
+    <br><br><br>
+    <div>
+      <form id="show-all">
+        <button type="button" value="click" onclick="testdatabase();">Show all Students</button>
+        &nbsp&nbsp&nbsp&nbsp
+        <button type="button" value="click" onclick="location.reload();">Reset Results</button>
+      </form>
+    </div>
+    <div class="filterStudents"></div>
+    <div class="testDB"></div>
+
+   <!-- ---------------------------------------------------------------------------------------------------- -->
+   
+   <script type="text/javascript" src="../bin/dbScripts.js"> </script> 
+   <script>
+    function testJava(){
+      let arg = "World";
+      window.java.myMethod(arg);
+    }
+    testJava();
+   </script>
+</body>
+</html>
